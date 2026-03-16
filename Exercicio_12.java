@@ -8,7 +8,7 @@ public class Exercicio_12{
         System.out.println("Informe uma nota : ");
         double nota = scanner.nextDouble();
 
-        String resultado = (nota >= 9) ? "(A)" :  (nota >= 7 && nota <= 8) ? "(B)" : (nota >= 5 && nota <=6) ? "(C)" : "(D)";
+        String resultado = (nota >= 9) ? "(A)" :  (nota >= 7) ? "(B)" : (nota >= 5) ? "(C)" : "(D)";
 
         System.out.println("A nota desse aluno foi : " +nota+ " fazendo-o receber : " +resultado);
 
