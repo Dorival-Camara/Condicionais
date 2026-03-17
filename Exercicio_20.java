@@ -5,26 +5,36 @@ public class Exercicio_20 {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Jogador 1 (pedra, papel ou tesoura): ");
-        String j1 = scanner.nextLine().toLowerCase();
+        System.out.println("1 - Pedra");
+        System.out.println("2 - Papel");
+        System.out.println("3 - Tesoura");
 
-        System.out.print("Jogador 2 (pedra, papel ou tesoura): ");
-        String j2 = scanner.nextLine().toLowerCase();
+        System.out.print("Jogador 1 escolha: ");
+        int j1 = scanner.nextInt();
 
-        String resultado;
+        System.out.print("Jogador 2 escolha: ");
+        int j2 = scanner.nextInt();
 
-        if (j1.equals(j2)) {
-            resultado = "Empate";
-        }
-        else if ((j1.equals("pedra") && j2.equals("tesoura")) || (j1.equals("tesoura") && j2.equals("papel")) || (j1.equals("papel") && j2.equals("pedra"))
-        ) {
-            resultado = "Jogador 1 venceu";
-        }
+        if (j1 < 1 || j1 > 3 || j2 < 1 || j2 > 3) {
+            System.out.println("Opção inválida!");
+        } 
         else {
-            resultado = "Jogador 2 venceu";
-        }
 
-        System.out.println(resultado);
+            String resultado;
+
+            if (j1 == j2) {
+                resultado = "Empate";
+            }
+            else if ((j1 == 1 && j2 == 3) || (j1 == 3 && j2 == 2) || (j1 == 2 && j2 == 1)
+            ) {
+                resultado = "Jogador 1 venceu";
+            }
+            else {
+                resultado = "Jogador 2 venceu";
+            }
+
+            System.out.println(resultado);
+        }
 
         scanner.close();
     }
