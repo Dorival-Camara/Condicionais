@@ -33,23 +33,34 @@ public class Exercicio_21{
                 break;
 
             case 2:
+                System.out.println("      A  B  C  D  E  F  G  H  I  J  K  L");
+
+    for(int i = 0; i < 12; i++){
+        int numeroLinha = i + 1;
+
+        if (numeroLinha < 10) {
+            System.out.print(" " + numeroLinha + " | ");
+        } else {
+            System.out.print(numeroLinha + " | ");
+        }
+
+        for(int c = 0; c < 12; c++){
+            if(cadeiras[i][c] == 'L'){
+                System.out.print("[ ]");
+            }  
+            else if(cadeiras[i][c] == 'R'){
+                System.out.print("[R]");
+            }
+            else{
+                System.out.print("[X]");
+            }
+        }
+        System.out.println();
+    }
+        }
                 break;
 
             case 3:
-                for(int i = 0; i < 12; i++){
-            for(int c = 0; c < 12; c++){
-                if(cadeiras[i][c] == 'L'){
-                    System.out.print("[ ]");
-                }  
-                else if(cadeiras[i][c] == 'R'){
-                    System.out.print("[R]");
-                }
-                else{
-                    System.out.print("[X]");
-                }
-            }
-            System.out.println();
-        }
                 break;
 
             case 4:
@@ -65,5 +76,5 @@ public class Exercicio_21{
 
         }while(opcao != 0);
 
-    }
 }
+
