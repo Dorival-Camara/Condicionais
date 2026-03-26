@@ -6,6 +6,7 @@ public class Exercicio_21 {
         Scanner scanner = new Scanner(System.in);
 
         char[][] cadeiras = new char[12][12];
+        char[] letras = {'A','B','C','D','E','F','G','H','I','J','K','L'};
         int opcao;
         int opcaoSala = 0;
         int opcaoEspetaculo = 0; 
@@ -90,16 +91,10 @@ public class Exercicio_21 {
                         }
                     }
                     
-                    System.out.println("      A  B  C  D  E  F  G  H  I  J  K  L");
+                    System.out.println("   1  2  3  4  5  6  7  8  9 10 11 12");
 
                     for (int i = 0; i < 12; i++) {
-                        int numeroLinha = i + 1;
-
-                        if (numeroLinha < 10) {
-                            System.out.print(" " + numeroLinha + " | ");
-                        } else {
-                            System.out.print(numeroLinha + " | ");
-                        }
+                        System.out.print(letras[i]+ " ");
 
                         for (int c = 0; c < 12; c++) {
                             if (cadeiras[i][c] == 'L') {
