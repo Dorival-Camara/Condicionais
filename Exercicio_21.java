@@ -11,6 +11,29 @@ public class Exercicio_21 {
         char[][][] cadeiras = new char[3][12][12];
         char[] letras = {'A','B','C','D','E','F','G','H','I','J','K','L'};
         double[] tabelaPreco = {100.0, 120.0, 200.0};
+        String[] titulosExercicios = {'Par ou Ímpar','Maior de Dois Números','Aprovação Escolar','Classificação de Temperatura',' Calculadora Simples com Switch','Ano Bissexto','Triângulo Válido','IMC','Dia da Semana com Switch','Positivo, Negativo ou Zero','Ingresso de Cinema','Nota por Conceito','Estação do Ano com Switch','Maior de Três Números','Verificador de Login',' Múltiplo de 3 e 5',' Desconto em Compra','Número Romano com Switch',' Velocidade e Multa','Jogo Pedra, Papel e Tesoura'};
+
+        
+        String[] enunciadoExercicios = {'Leia um número inteiro e informe se ele é par ou ímpar. Obrigatório: use o operador ternário para exibir a mensagem.','Leia dois números inteiros e exiba qual é o maior. Obrigatório: use o operador ternário para determinar e exibir o maior.',
+            'Leia a média de um aluno (0 a 10) e exiba: "Aprovado" se média >= 7 "Recuperação" se média >= 5 e < 7 "Reprovado" se média < 5',
+            'Leia a temperatura em graus Celsius e classifique: Abaixo de 15°C → "Frio" Entre 15°C e 25°C → "Agradável" Acima de 25°C → "Quente" Desafio: tente usar o ternário aninhado para classificar.',
+            'Leia dois números e um operador (+, -, *, /) e realize a operação correspondente usando switch. Trate a divisão por zero.',
+            'Leia um ano e informe se ele é bissexto ou não.',
+            'Leia três lados e verifique se formam um triângulo válido. Se sim, classifique como equilátero, isósceles ou escaleno.',
+            'Leia o peso (kg) e a altura (m) de uma pessoa, calcule o IMC (peso / altura²) e classifique: IMC < 18.5 → "Abaixo do peso" 18.5 ≤ IMC < 25 → "Peso normal" 25 ≤ IMC < 30 → "Sobrepeso" IMC ≥ 30 → "Obesidade" Desafio: use o ternário para exibir se o IMC está "dentro" ou "fora" da faixa saudável.',
+            'Leia um número de 1 a 7 e exiba o nome do dia da semana correspondente usando switch. Para qualquer outro número, exiba "Dia inválido".',
+            'Leia um número e informe se é positivo, negativo ou zero. Obrigatório: use o operador ternário aninhado.',
+            'Uma sala de cinema cobra: Menores de 12 anos: R$ 10,00 Entre 12 e 60 anos: R$ 20,00 Acima de 60 anos: R$ 10,00 (meia) Leia a idade e exiba o valor do ingresso.',
+            'Leia uma nota (0-10) e exiba o conceito: 9 a 10 → "A" 7 a 8 → "B" 5 a 6 → "C" 0 a 4 → "D"',
+            'Leia o número do mês (1-12) e exiba a estação do ano correspondente (considere o hemisfério sul).',
+            'Leia três números inteiros e exiba qual é o maior entre os três. Trate o caso de empate.',
+            'Defina um usuário e senha fixos no código. Leia o usuário e a senha digitados e exiba "Acesso permitido" ou "Acesso negado". Obrigatório: use o operador ternário para exibir a mensagem.',
+            'Leia um número inteiro e informe: Se é múltiplo de 3 e de 5 simultaneamente Se é múltiplo apenas de 3 Se é múltiplo apenas de 5 Se não é múltiplo de nenhum Desafio: use o ternário onde for possível.',
+            'Uma loja dá desconto conforme o valor da compra: Acima de R$ 500 → 20% de desconto Entre R$ 200 e R$ 500 → 10% de desconto Abaixo de R$ 200 → sem desconto Leia o valor e exiba o valor final após o desconto.',
+            'Leia um número de 1 a 10 e exiba seu equivalente em algarismo romano usando switch.',
+            'Leia a velocidade de um veículo e o limite da via. Classifique: Dentro do limite → "Sem multa" Até 20% acima → "Multa leve" Entre 20% e 50% acima → "Multa grave" Acima de 50% → "Multa gravíssima + suspensão"',
+            'Leia a escolha de dois jogadores ("pedra", "papel" ou "tesoura") e determine quem venceu ou se houve empate usando if/else encadeado. Desafio: use o operador ternário para exibir o resultado final ("Jogador 1 venceu", "Jogador 2 venceu" ou "Empate").'};
+
 
         int totalSala = 0;
         int salaSelecionada = -1;
@@ -35,6 +58,7 @@ public class Exercicio_21 {
             System.out.println("5 - Comprar assento");
             System.out.println("6 - Cancelar reserva");
             System.out.println("7 - Relatório financeiro");
+            System.out.println("8 - Menu de exercícios");
             System.out.println("0 - Finalizar");
             System.out.print("\nDigite a opção desejada: ");
             opcao = scanner.nextInt();
@@ -239,6 +263,16 @@ public class Exercicio_21 {
                         System.out.println("Potencial: R$ " + (144 * valor));
                     }
                     break;
+
+                case 8: 
+                    System.out.println("-----------------------------");
+                    System.out.println("LISTA DE EXERCÍCIOS");
+                    System.out.println("-----------------------------");
+
+                    for(int i = 0; i < 8, i++);
+                        System.out.println(titulosExercicios[i]+ " ");
+                        System.out.println(enunciadoExercicios[i] " ");
+                    break;    
 
                 case 0:
                     System.out.println("Programa encerrado.");
